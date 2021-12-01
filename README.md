@@ -5,7 +5,7 @@ Hi, welcome to Advent of Code 2021! You will find my solutions to the questions 
 ## Prerequisites
 
 - [nvm](https://github.com/nvm-sh/nvm)
-- Node version v17.2.0
+- Node version `v17.2.0`
 
 ## Before running to see my answers
 
