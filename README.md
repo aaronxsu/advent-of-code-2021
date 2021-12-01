@@ -1,6 +1,6 @@
 # Advent of Code 2021
 
-Hi, welcome to Advent of Code 2021! You will find my solutions to the questions in TypeScript in this repo.
+Hi, welcome to [Advent of Code 2021](https://adventofcode.com/2021)! You will find my solutions to the questions in TypeScript in this repo.
 
 ## Prerequisites
 
