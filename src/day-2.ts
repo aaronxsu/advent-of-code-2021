@@ -1001,16 +1001,24 @@ const directions = [
   "forward 6",
 ];
 
+enum Direction {
+  Up = "UP",
+  Down = "DOWN",
+  Forward = "FORWARD"
+}
+
+const SPACE = " ";
+
 const finalUnitMultiplied = (input: string[]): number => {
   if (input.length === 0) return 0;
   let horizontal = 0;
   let vertical = 0;
   for (let i = 0; i < input.length; i++) {
-    const [dir, step] = input[i].split(" ");
+    const [dir, step] = input[i].split(SPACE);
     const unit = parseInt(step);
-    if (dir.toUpperCase() === "UP") vertical += unit;
-    else if (dir.toUpperCase() === "DOWN") vertical -= unit;
-    else if (dir.toUpperCase() === "FORWARD") horizontal += unit;
+    if (dir.toUpperCase() === Direction.Up) vertical += unit;
+    else if (dir.toUpperCase() === Direction.Down) vertical -= unit;
+    else if (dir.toUpperCase() === Direction.Forward) horizontal += unit;
   }
   return Math.abs(horizontal * vertical);
 };
@@ -1021,11 +1029,11 @@ const finalUnitMultipliedTwo = (input: string[]): number => {
   let vertical = 0;
   let aim = 0;
   for (let i = 0; i < input.length; i++) {
-    const [dir, step] = input[i].split(" ");
+    const [dir, step] = input[i].split(SPACE);
     const unit = parseInt(step);
-    if (dir.toUpperCase() === "UP") aim -= unit;
-    else if (dir.toUpperCase() === "DOWN") aim += unit;
-    else if (dir.toUpperCase() === "FORWARD") {
+    if (dir.toUpperCase() === Direction.Up) aim -= unit;
+    else if (dir.toUpperCase() === Direction.Down) aim += unit;
+    else if (dir.toUpperCase() === Direction.Forward) {
       horizontal += unit;
       vertical += aim * unit;
     }
